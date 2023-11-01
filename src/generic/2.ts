@@ -11,7 +11,10 @@ type AllType = {
   weight: number
 }
 
-function compare (top, bottom): AllType {
+type NameColor = Pick<AllType, "name" | "color">;
+type PositionWeight = Pick<AllType, "position" | "weight">;
+
+function compare (top: NameColor, bottom: PositionWeight): AllType {
   return {
     name: top.name,
     color: top.color,
@@ -20,4 +23,4 @@ function compare (top, bottom): AllType {
   }
 }
 
-export {};
+export { };
